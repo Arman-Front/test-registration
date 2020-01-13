@@ -1,28 +1,87 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <form action="registration.php">
+      <div class="registration">
+        <h1>{{ reg }}</h1>
+
+        <hr>
+
+        <div class="reg_form">
+          <label for="email">E-mail</label>
+          <input type="email"
+                 id="email"
+                 placeholder="youremail@gmail.com"
+                 @blur="$v.email.$touch()"
+                 :class="{'invalid': $v.email.$error}"
+                 v-model="email"
+          >
+          <div class="invalid_comment" :class="{'show': !$v.email.email}">Неверно заполнен E-mail.</div>
+        </div>  <!-- e-mail -->
+
+        <div class="reg_form">
+          <label for="password">Пароль</label>
+          <input type="password"
+                 id="password"
+                 placeholder="******"
+                 @blur="$v.password.$touch()"
+                 :class="{'invalid': $v.password.$error}"
+                 v-model="password"
+          >
+          <div class="invalid_comment" :class="{'show': !$v.password.minLength}">
+            Минимальная длинна пароля {{ $v.password.$params.minLength.min }} символов, вы заполнили всего {{ password.length }}.
+          </div>
+        </div>  <!-- password -->
+
+        <div class="reg_form">
+          <label for="pass_repeat">Повторите пароль</label>
+          <input type="password"
+                 id="pass_repeat"
+                 placeholder="******"
+                 @input="$v.passRepeat.$touch()"
+                 :class="{'invalid': $v.passRepeat.$error}"
+                 v-model="passRepeat"
+          >
+          <div class="invalid_comment" :class="{'show': !$v.passRepeat.sameAs}">
+            Пароли не совпадают.
+          </div>
+        </div>  <!-- password-repeat -->
+
+        <hr>
+
+        <p>Регистрируясь, вы принимаете наши <a href="#">условия</a>.</p>
+        <button type="submit"
+                class="register_button"
+                :class="{'disable': $v.email.$invalid || $v.password.$invalid || $v.passRepeat.$invalid}"
+        >
+          Зарегистрироваться</button>
+      </div>
+    </form>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { required, email, minLength, sameAs } from 'vuelidate/lib/validators'
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      email: '',
+      password: '',
+      passRepeat: '',
+      reg: 'Зарегистрироваться'
+    }
+  },
+  validations: {
+    email: {
+      required,
+      email
+    },
+    password: {
+      minLength: minLength(6)
+    },
+    passRepeat: {
+      sameAs: sameAs('password')
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

@@ -1,0 +1,92 @@
+* {box-sizing: border-box}
+
+.registration {
+    padding: 16px;
+    width: 600px;
+    margin: auto;
+}
+
+.reg_form {
+    height: 120px;
+}
+
+h1, p {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type=email],
+input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    box-shadow: 0 0 4px 2px #ddd;
+    outline: none;
+}
+
+input:hover {
+    box-shadow: 0 0 4px 2px #ddd;
+}
+
+input.invalid {
+    box-shadow: 0 0 4px 2px #a00;
+}
+
+.invalid_comment {
+    display: none;
+    margin: 5px 0 22px 0;
+}
+
+.invalid_comment.show {
+    color: #a00;
+    display: block;
+}
+
+.invalid_comment.comment {
+    display: block;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.register_button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.register_button.disable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.register_button:hover {
+    opacity:1;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #4caf50;
+}
+
+a {
+    color: dodgerblue;
+}
+
+.sign_in {
+    background-color: #f1f1f1;
+    text-align: center;
+}
