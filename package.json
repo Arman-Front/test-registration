@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.4.4",
     "vue": "^2.6.10",
+    "vue-router": "^3.1.4",
     "vuelidate": "^0.7.4"
   },
   "devDependencies": {

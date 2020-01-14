@@ -1,3 +1,40 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* menu */
+.navigate {
+    background: #959595;
+    margin: auto;
+}
+
+.navigate_link {
+    padding: 10px 20px;
+}
+
+.navigate_links {
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    line-height: 80px;
+}
+
+.navigate_links a {
+    text-decoration: none;
+    color: #fff;
+    width: 50%;
+}
+
+.navigate_links a:hover {
+    background: #7b7b7b;
+}
+
+.navbar_element:active {
+    background: #7b7b7b;
+}
+
+/* registration */
 * {box-sizing: border-box}
 
 .registration {
