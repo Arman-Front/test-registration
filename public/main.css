@@ -69,21 +69,16 @@ hr {
     border: none;
     cursor: pointer;
     width: 100%;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
-.register_button.disable {
+.register_button:disabled {
     opacity: 0.5;
     pointer-events: none;
 }
 
 .register_button:hover {
     opacity:1;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #4caf50;
-}
-
-a {
-    color: dodgerblue;
 }
 
 .sign_in {

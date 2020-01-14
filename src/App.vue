@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <form action="registration.php">
+    <form action="./public/registration.php" @submit.prevent="onSubmit">
       <div class="registration">
         <h1>{{ reg }}</h1>
 
@@ -51,7 +51,7 @@
         <p>Регистрируясь, вы принимаете наши <a href="#">условия</a>.</p>
         <button type="submit"
                 class="register_button"
-                :class="{'disable': $v.email.$invalid || $v.password.$invalid || $v.passRepeat.$invalid}"
+                :disabled="$v.$invalid"
         >
           Зарегистрироваться</button>
       </div>
@@ -69,6 +69,14 @@ export default {
       password: '',
       passRepeat: '',
       reg: 'Зарегистрироваться'
+    }
+  },
+  methods: {
+    onSubmit () {
+      // eslint-disable-next-line no-console
+      console.log('Email', this.email)
+      // eslint-disable-next-line no-console
+      console.log('Password', this.password)
     }
   },
   validations: {
