@@ -57,6 +57,10 @@
                     Зарегистрироваться</button>
             </div>
         </form>
+
+        <div class="auth">
+            <p class="auth_text">Уже зарегестрированы? <a href="/" class="auth_link">Войти</a>.</p>
+        </div>
     </div>
 </template>
 

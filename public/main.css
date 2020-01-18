@@ -17,20 +17,27 @@ body {
     text-align: center;
     font-size: 24px;
     display: flex;
-    line-height: 80px;
+    justify-content: center;
 }
 
 .navigate_links a {
     text-decoration: none;
     color: #fff;
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
 }
 
 .navigate_links a:hover {
-    background: #7b7b7b;
+    background: #8c8c8c;
 }
 
-.navbar_element:active {
+.navbar_element {
+    list-style-type: none;
+    width: 300px;
+}
+
+.navbar_element.active {
     background: #7b7b7b;
 }
 
