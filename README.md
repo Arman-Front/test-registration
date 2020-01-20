@@ -20,5 +20,10 @@ npm run build
 npm run lint
 ```
 
+### Start server, port 3000
+```
+npm run server
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
