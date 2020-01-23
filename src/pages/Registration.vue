@@ -99,3 +99,7 @@
         }
     }
 </script>
+
+<style lang="scss">
+    @import "././src/assets/scss/style";
+</style>

@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-        <h1>О нас</h1>
+        <div class="home_page">
+            <h1>О нас</h1>
+        </div>
     </div>
 </template>
 
@@ -10,6 +12,6 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="scss">
+    @import "../assets/scss/home";
 </style>

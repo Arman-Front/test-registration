@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* menu */
+.navigate {
+  background: #959595;
+  margin: auto;
+
+  .navigate_links {
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+
+    .navbar_element {
+      list-style-type: none;
+      width: 300px;
+
+      &.active {
+        background: #7b7b7b;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+
+        &:hover {
+          background: #8c8c8c;
+        }
+      }
+    }
+  }
+}
+
+/* registration */
+* {box-sizing: border-box}
+
+.registration {
+  padding: 16px;
+  width: 600px;
+  margin: auto;
+
+  h1, p {
+    text-align: center;
+  }
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  .reg_form {
+    height: 120px;
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type=email],
+    input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+
+      &:focus {
+        background-color: #ddd;
+        box-shadow: 0 0 4px 2px #ddd;
+        outline: none;
+      }
+    }
+
+    input {
+      &:hover {
+        box-shadow: 0 0 4px 2px #ddd;
+      }
+
+      &:invalid {
+        box-shadow: 0 0 4px 2px #a00;
+      }
+    }
+
+    .invalid_comment {
+      display: none;
+      margin: 5px 0 22px 0;
+
+      &.show {
+        color: #a00;
+        display: block;
+      }
+
+      &.comment {
+        display: block;
+      }
+    }
+  }
+
+  .register_button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.auth {
+  background-color: #f1f1f1;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
