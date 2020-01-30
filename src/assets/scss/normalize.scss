@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+  }
+
+  .container {
+    margin: 2%;
+    transition: .5s ease-in-out;
+
+    .navigate.navigate_links.navbar_element {
+      font-size: 20px;
+    }
+  }
+
+  .registration {
+    width: auto;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    .reg_form {
+      label {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .home_page {
+    width: auto;
+
+    h1 {
+      font-size: 20px;
+    }
+  }
+}

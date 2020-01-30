@@ -20,3 +20,7 @@
     name: 'Nav'
   }
 </script>
+
+<style lang="scss">
+  @import "assets/scss/normalize";
+</style>

@@ -2,6 +2,8 @@
     <div class="container">
         <div class="home_page">
             <h1>О нас</h1>
+
+            <hr>
         </div>
     </div>
 </template>
